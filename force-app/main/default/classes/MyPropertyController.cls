@@ -1,5 +1,6 @@
 public with sharing class MyPropertyController {
     @AuraEnabled
+    //Get List of Similar Properties
     public static List<Property__c> getSimilarProperties (Id recordId, String searchCriteria, Decimal beds, Decimal price, Decimal priceRange ) {
         if (searchCriteria == 'Bedrooms') {
             return [
