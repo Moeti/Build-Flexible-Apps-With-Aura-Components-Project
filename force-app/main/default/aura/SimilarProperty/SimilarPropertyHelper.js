@@ -1,4 +1,5 @@
 ({
+    //Show or Hide edit form
 	showHide : function(component) {
 		var editForm = component.find("editForm");
         $A.util.toggleClass(editForm, "slds-hide");

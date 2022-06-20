@@ -11,6 +11,7 @@
         targetRecord="{!v.property}"
         recordUpdated="{!c.doInit}"
         layoutType="FULL"/>
+        <!--Similar Properties Card-->
         <lightning:card iconName="custom:custom85" title="{! 'Similar Properties by ' + v.searchCriteria}" class="slds-is-relative">
             <div class="slds-p-left_medium slds-p-right_medium">
                 <ul class="slds-list_vertical slds-has-dividers_top-space">
@@ -30,4 +31,5 @@
             </div>
             <lightning:spinner aura:id="spinner" variant="brand" size="large"/>
         </lightning:card>
+        <!--Similar Properties Card End-->
     </aura:component>

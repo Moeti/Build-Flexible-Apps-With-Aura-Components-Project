@@ -6,14 +6,18 @@
                     recordId="{!v.recordId}"
                     targetFields="{!v.property}"
                     layoutType="FULL"/>
+    <!--Broker Card-->
     <lightning:card iconName="standard:user" title="{! 'Broker for ' + v.property.Name}">
         <div class="slds-p-left_large slds-p-right_medium">
         </div>
     </lightning:card>
+    <!--Broker Card End-->
+    <!--Broker RecordForm-->
     <lightning:recordForm aura:id="brokerForm"
         recordId="{!v.property.Broker__c}"
         objectApiName="Broker__c"
         fields="{!v.brokerFields}"
         columns="2"
         mode="View"/>
+    <!--Broker RecordForm End-->
 </aura:component>

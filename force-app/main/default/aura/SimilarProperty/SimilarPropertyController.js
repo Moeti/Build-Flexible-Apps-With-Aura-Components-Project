@@ -1,5 +1,5 @@
 ({
-    //Navigates to the property selected
+    //Open selected record
     navToRecord : function (component, event, helper) {
         var navEvt = $A.get("e.force:navigateToSObject");
         navEvt.setParams({
@@ -7,12 +7,11 @@
         });
         navEvt.fire();
     },
-
-    //Opens the edit property modal
+    //Edit selected record
     editRecord : function(component, event, helper) {
     helper.showHide(component);
 	},
-    //Save changes and close edit property modal
+    //Show message when edited
     handleSuccess : function(component, event, helper) {
         var toastEvent = $A.get("e.force:showToast");
         toastEvent.setParams({
@@ -25,7 +24,7 @@
 		recUpdate.fire();
         helper.showHide(component);
     },
-    //Closes the edit property modal
+    //Cancel edit
     handleCancel : function(component, event, helper) {
         helper.showHide(component);
         event.preventDefault();

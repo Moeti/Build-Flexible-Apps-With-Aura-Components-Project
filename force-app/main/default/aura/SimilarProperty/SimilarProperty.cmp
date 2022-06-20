@@ -1,6 +1,7 @@
 <aura:component >
 	<aura:attribute name="property" type="Property__c"/>
     <aura:registerEvent name="recordUpdated" type="c:recordUpdated"/>
+    <!--Record View Form-->
     <lightning:recordViewForm aura:id="viewForm" recordId="{!v.property.Id}" objectApiName="Property__c">
         <div class="slds-media">
             <div class="slds-media__figure">
@@ -30,6 +31,8 @@
             </div>
         </div>
     </lightning:recordViewForm>
+    <!--Record View Form End-->
+    <!--Record Edit Form-->
     <lightning:recordEditForm aura:id="editForm" recordId="{!v.property.Id}" objectApiName="Property__c" class="slds-hide" onsuccess="{!c.handleSuccess}">
         <div class="slds-media">
             <div class="slds-media__figure">
@@ -62,4 +65,5 @@
             </div>
         </div>
     </lightning:recordEditForm>
+    <!--Record Edit Form End-->
 </aura:component>
